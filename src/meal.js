@@ -10,10 +10,10 @@ function createMenuItem(name, price, type) {
   }
 }
 
-function addIngredients(item, ingredients) {
+function addIngredients(item, varName) {
   //checks if the item waiting to be added exists in the ingredients array already
-  if (ingredients.includes(item) === false) {
-  ingredients.push(item);
+  if (varName.includes(item) === false) {
+  varName.push(item);
   } 
 }
 
@@ -28,7 +28,7 @@ function decreasePrice(itemToDec) {
 // returns an object with keys of title, ingredients, and type
 function createRecipe(title, ingredients, menuItemType) {
   return {
-    'title' : title,
+    'title': title,
     'ingredients' : ingredients,
     'type' : menuItemType
   }
